@@ -52,7 +52,7 @@ with st.form("my_form", clear_on_submit=True):
 if submit_btn:
     #st.sidebar.write(['Correct' in i for i in st.session_state.respuestas.get(question.question)])
     #st.sidebar.write([a,b,c,d,e,f])
-    st.sidebar.write(st.session_state.respuestas)
+    st.sidebar.write(st.session_state)
     #if ['Correct' in i for i in st.session_state.respuestas.get(question.question)] == [a,b,c,d,e,f]:
     #    st.sidebar.success("Correcto :)")
     #else:
