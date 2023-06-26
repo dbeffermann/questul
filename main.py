@@ -30,7 +30,7 @@ if 'n_actual' not in st.session_state:
 if 'status' not in st.session_state:
     st.session_state.status = 'on'
 
-preguntas = leer_df().iloc[st.session_state.n_actual,:]
+preguntas = leer_df().sample(1)
 
 def siguiente():
     st.session_state.n_actual += 1
