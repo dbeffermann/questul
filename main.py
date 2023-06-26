@@ -50,8 +50,8 @@ with st.form("my_form", clear_on_submit=True):
     submit_btn = st.form_submit_button("Enviar Respuestas")
 
 if submit_btn:
-    print(['Correct' in i for i in question.values.tolist()])
-    print([a,b,c,d,e,f])
+    st.sidebar.write(['Correct' in i for i in question.values.tolist()])
+    st.sidebar.write([a,b,c,d,e,f])
     if ['Correct' in i for i in question.values.tolist()] == [a,b,c,d,e,f]:
         st.success("Correcto :)")
     else:
