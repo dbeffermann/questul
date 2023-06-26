@@ -38,6 +38,7 @@ def guardar_respuestas_en_cache(question_, a_, b_, c_, d_, e_, f_):
 
 question = preguntas.iloc[st.session_state.n_actual]
 st.header(question.question)
+st.write(question)
 
 with st.form("my_form", clear_on_submit=True):
     a = st.checkbox(label=question.a.replace("(Correct)", ""), key="a")
@@ -49,7 +50,7 @@ with st.form("my_form", clear_on_submit=True):
     submit_btn = st.form_submit_button("Enviar Respuestas")
 
 if submit_btn:
-    st.write(question)
+    
     guardar_respuestas_en_cache(question.question, a, b, c, d, e, f)
     siguiente()
     st.experimental_rerun()
