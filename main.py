@@ -49,8 +49,6 @@ with st.form("my_form", clear_on_submit=True):
     submit_btn = st.form_submit_button("Enviar Respuestas")
 
 if submit_btn:
-    print(type(question))
-    time.sleep(10)
     guardar_respuestas_en_cache(question.question, a, b, c, d, e, f)
     siguiente()
     st.experimental_rerun()
