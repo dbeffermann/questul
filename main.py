@@ -50,9 +50,9 @@ with st.form("my_form", clear_on_submit=True):
     submit_btn = st.form_submit_button("Enviar Respuestas")
 
 if submit_btn:
-    st.sidebar.write(['Correct' in i for i in st.session_state.get(question.question)])
+    st.sidebar.write(['Correct' in i for i in st.session_state.respuestas.get(question.question)])
     st.sidebar.write([a,b,c,d,e,f])
-    if ['Correct' in i for i in st.session_state.get(question.question)] == [a,b,c,d,e,f]:
+    if ['Correct' in i for i in st.session_state.respuestas.get(question.question)] == [a,b,c,d,e,f]:
         st.sidebar.success("Correcto :)")
     else:
         st.sidebar.error("Incorrecto :(")
