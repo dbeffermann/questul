@@ -59,9 +59,9 @@ if submit_btn:
     guardar_respuestas_en_cache(question.question, a, b, c, d, e, f)
     #siguiente()
     st.sidebar.markdown("---")
-    btn_next = st.sidebar.button("Siguiente")
-    if btn_next:
-        st.experimental_rerun()
+    #btn_next = st.sidebar.button("Siguiente")
+    #if btn_next:
+        #st.experimental_rerun()
 
 def terminar_sesion():
     df_out = pd.DataFrame(st.session_state.respuestas).T.reset_index()
