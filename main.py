@@ -56,9 +56,9 @@ if submit_btn:
         st.success("Correcto :)")
     else:
         st.error("Incorrecto :(")
-    #guardar_respuestas_en_cache(question.question, a, b, c, d, e, f)
+    guardar_respuestas_en_cache(question.question, a, b, c, d, e, f)
     #siguiente()
-    #st.experimental_rerun()
+    st.experimental_rerun()
 
 def terminar_sesion():
     df_out = pd.DataFrame(st.session_state.respuestas).T.reset_index()
