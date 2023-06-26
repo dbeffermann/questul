@@ -16,7 +16,7 @@ def leer_df(archivo="consolidado.xlsx"):
     df = pd.read_excel(archivo, engine='openpyxl').drop(columns="Unnamed: 0")
     return df
 
-preguntas = leer_df()
+preguntas = leer_df().sample(1)
 
 # Diseño del encabezado
 st.sidebar.image('logo.png')
