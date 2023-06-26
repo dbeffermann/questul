@@ -51,7 +51,7 @@ with st.form("my_form", clear_on_submit=True):
 
 if submit_btn:
     guardar_respuestas_en_cache(question.question, a, b, c, d, e, f)
-    st.sidebar.write(['Correct' in i for i in st.session_state.respuestas.get(question.question))
+    st.sidebar.write(['Correct' in i for i in st.session_state.respuestas.get(question.question)])
     st.sidebar.write([a,b,c,d,e,f])
     #if ['Correct' in i for i in st.session_state.respuestas.get(question.question)] == [a,b,c,d,e,f]:
      #   st.sidebar.success("Correcto :)")
