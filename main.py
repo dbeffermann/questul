@@ -16,7 +16,7 @@ def leer_df(archivo="consolidado.xlsx"):
     df = pd.read_excel(archivo, engine='openpyxl').drop(columns="Unnamed: 0")
     return df
 
-preguntas = leer_df().sample(1)
+
 
 # Diseño del encabezado
 st.sidebar.image('logo.png')
@@ -29,6 +29,8 @@ if 'n_actual' not in st.session_state:
     st.session_state.n_actual = 0
 if 'status' not in st.session_state:
     st.session_state.status = 'on'
+
+preguntas = leer_df().iloc[st.session_state.n_actual,:]
 
 def siguiente():
     st.session_state.n_actual += 1
