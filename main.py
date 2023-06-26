@@ -50,18 +50,19 @@ with st.form("my_form", clear_on_submit=True):
     submit_btn = st.form_submit_button("Enviar Respuestas")
 
 if submit_btn:
-    st.sidebar.write(['Correct' in i for i in st.session_state.respuestas.get(question.question)])
+    guardar_respuestas_en_cache(question.question, a, b, c, d, e, f)
+    st.sidebar.write(['Correct' in i for i in st.session_state.respuestas.get(question.question))
     st.sidebar.write([a,b,c,d,e,f])
     #if ['Correct' in i for i in st.session_state.respuestas.get(question.question)] == [a,b,c,d,e,f]:
-    #    st.sidebar.success("Correcto :)")
+     #   st.sidebar.success("Correcto :)")
     #else:
      #   st.sidebar.error("Incorrecto :(")
-    guardar_respuestas_en_cache(question.question, a, b, c, d, e, f)
+    
     #siguiente()
     st.sidebar.markdown("---")
     #btn_next = st.sidebar.button("Siguiente")
     #if btn_next:
-    st.experimental_rerun()
+    #st.experimental_rerun()
 
 def terminar_sesion():
     df_out = pd.DataFrame(st.session_state.respuestas).T.reset_index()
