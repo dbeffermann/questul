@@ -38,7 +38,7 @@ def guardar_respuestas_en_cache(question_, a_, b_, c_, d_, e_, f_):
 
 question = preguntas.iloc[st.session_state.n_actual]
 st.header(question.question)
-st.write(question.values.tolist())
+st.write(['Correct' in i for i in question.values.tolist()])
 
 with st.form("my_form", clear_on_submit=True):
     a = st.checkbox(label=question.a.replace("(Correct)", ""), key="a")
