@@ -49,7 +49,7 @@ with st.form("my_form", clear_on_submit=True):
     submit_btn = st.form_submit_button("Enviar Respuestas")
 
 if submit_btn:
-    st.write(question.loc[0, 'a':'f'])
+    st.write(question.columns)
     time.sleep(10)
     guardar_respuestas_en_cache(question.question, a, b, c, d, e, f)
     siguiente()
