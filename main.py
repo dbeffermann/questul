@@ -53,10 +53,10 @@ if submit_btn:
     #st.sidebar.write(['Correct' in i for i in st.session_state.respuestas.get(question.question)])
     #st.sidebar.write([a,b,c,d,e,f])
     st.sidebar.write(st.session_state.respuestas)
-    if ['Correct' in i for i in st.session_state.respuestas.get(question.question)] == [a,b,c,d,e,f]:
-        st.sidebar.success("Correcto :)")
-    else:
-        st.sidebar.error("Incorrecto :(")
+    #if ['Correct' in i for i in st.session_state.respuestas.get(question.question)] == [a,b,c,d,e,f]:
+    #    st.sidebar.success("Correcto :)")
+    #else:
+     #   st.sidebar.error("Incorrecto :(")
     guardar_respuestas_en_cache(question.question, a, b, c, d, e, f)
     #siguiente()
     st.sidebar.markdown("---")
